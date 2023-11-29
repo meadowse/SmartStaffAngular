@@ -1,0 +1,54 @@
+<div class="main">
+  <div *ngIf="!isLogin">
+    <h2>Вход для инструкторов</h2>
+    <form [formGroup]="loginForm">
+      <p>
+        <tui-input formControlName="email">
+          email
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+
+      <p>
+        <tui-input formControlName="password">
+          password
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+      <p>
+        <button tuiButton (click)="login()">login</button>
+      </p>
+    </form>
+  </div>
+
+  <div *ngIf="isLogin">
+    <h2>Добавить урок</h2>
+
+    <form [formGroup]="testForm">
+      <p>
+        <tui-input formControlName="testValue">
+          Type a text
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+      <p>
+        <tui-input formControlName="testValue">
+          Type a text
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+      <p>
+        <tui-input formControlName="testValue">
+          Type a text
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+      <p>
+        <tui-input formControlName="testValue">
+          Type a text
+          <input tuiTextfield />
+        </tui-input>
+      </p>
+    </form>
+  </div>
+</div>

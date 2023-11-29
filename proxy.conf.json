@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://2baf-89-232-116-78.ngrok-free.app",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

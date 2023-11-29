@@ -1,0 +1,38 @@
+<div class="main">
+  <tui-island>
+    <h3 class="tui-island__title">Урок - главное в деле бармена</h3>
+    <p class="tui-island__paragraph tui-island__paragraph_button">
+      <button
+        tuiButton
+        type="button"
+        (click)="exit()"
+        appearance="secondary"
+        size="s"
+      >
+        выйти
+      </button>
+    </p>
+  </tui-island>
+  <br />
+
+  <p *ngFor="let item of arr; let i = index">
+    <app-lesson-item [test]="item"></app-lesson-item>
+  </p>
+
+  <tui-island>
+    <h5>
+      Правильно ответов {{ lessonService.score }} из
+      {{ this.lessonService.length }}
+    </h5>
+
+    <button
+      (click)="check()"
+      tuiButton
+      type="button"
+      appearance="secondary"
+      size="s"
+    >
+      закончить тестирование
+    </button>
+  </tui-island>
+</div>

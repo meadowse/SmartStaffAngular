@@ -1,0 +1,65 @@
+<tui-island>
+  <h3 class="tui-island__title">{{ test.cardHeader }}</h3>
+  <p class="tui-island__paragraph">{{ test.cardText }}</p>
+  <p *ngIf="ok">Верно</p>
+  <p *ngIf="no">Вы ошиблись, правильный вариант {{ test.cardV0 }}</p>
+
+  <br />
+  <form [formGroup]="testForm">
+    <div class="tui-form__row">
+      <tui-radio-block
+        class="radio"
+        contentAlign="right"
+        formControlName="testValue"
+        item="1"
+        size="m"
+      >
+        {{ test.cardV1 }}
+      </tui-radio-block>
+    </div>
+    <div class="tui-form__row">
+      <tui-radio-block
+        class="radio"
+        contentAlign="right"
+        formControlName="testValue"
+        item="2"
+        size="m"
+      >
+        {{ test.cardV2 }}
+      </tui-radio-block>
+    </div>
+    <div class="tui-form__row">
+      <tui-radio-block
+        class="radio"
+        contentAlign="right"
+        formControlName="testValue"
+        item="3"
+        size="m"
+      >
+        {{ test.cardV3 }}
+      </tui-radio-block>
+    </div>
+    <div class="tui-form__row">
+      <tui-radio-block
+        class="radio"
+        contentAlign="right"
+        formControlName="testValue"
+        item="4"
+        size="m"
+      >
+        {{ test.cardV4 }}
+      </tui-radio-block>
+    </div>
+    <br />
+    <button
+      [disabled]="ok || no"
+      tuiButton
+      type="button"
+      (click)="stat()"
+      appearance="secondary"
+      size="s"
+    >
+      Выбрать
+    </button>
+  </form>
+</tui-island>
